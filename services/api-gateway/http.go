@@ -22,7 +22,7 @@ func handleTripPreview(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	url := "http://trip-service/preview"
+	url := "http://trip-service:8083/preview"
 	log.Println(url)
 	res, err := http.Post(url, "application/json", r.Body)
 	if err != nil {
